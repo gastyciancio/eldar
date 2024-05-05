@@ -71,7 +71,7 @@ public abstract class Card {
 	public String rate(int amount) {
 		try {
 			if (this.isValidCard() && this.isValidOperation(amount)) {
-				return this.type() + ", amount: " + this.calculate_rate(amount);
+				return this.toString() + ", amount: " + this.calculate_rate(amount);
 			}else {
 				throw new Exception(this.type() +". Please checkout if you sent an amount lower than 1000 and the expìred date of the card is after today");
 			}
